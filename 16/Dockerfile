@@ -128,7 +128,8 @@ RUN rm -rf /usr/src/asterisk
 
 # Second Stage#
 FROM centos:centos7
-ENV build_date 2019-04-24
+ENV build_date 2019-04-25
+ENV PATH="/opt/asterisk/sbin:${PATH}"
 
 RUN yum update -y && \
     yum install -y epel-release && \
