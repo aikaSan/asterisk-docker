@@ -34,7 +34,7 @@ RUN yum update -y && \
 
 # Download asterisk.
 WORKDIR /usr/src
-RUN git clone -b 16.3 --depth 1 https://github.com/asterisk/asterisk.git
+RUN git clone -b 16.4 --depth 1 https://github.com/asterisk/asterisk.git
 
 # Configure
 RUN mkdir /opt/asterisk
@@ -45,7 +45,6 @@ RUN make menuselect.makeopts
 RUN menuselect/menuselect \
   --disable BUILD_NATIVE \
   --enable cdr_csv \
-  # --enable chan_sip \
   --enable res_snmp \
   --enable res_http_websocket \
   --enable res_hep_pjsip \
