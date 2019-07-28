@@ -34,7 +34,7 @@ RUN yum update -y && \
 
 # Download asterisk.
 WORKDIR /usr/src
-RUN git clone -b 16.4 --depth 1 https://github.com/asterisk/asterisk.git
+RUN git clone -b 16.5 --depth 1 https://github.com/asterisk/asterisk.git
 
 # Configure
 RUN mkdir /opt/asterisk
